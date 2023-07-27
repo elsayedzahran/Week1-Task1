@@ -23,7 +23,7 @@ public class Main {
             System.out.println("To Exit Program Enter any other Button");
 
             String choiceString = operation.getInput("Enter Your Choice : ");
-            if (validation.isNumber(choiceString)){
+            if (validation.isNumber(choiceString, "The Program Will Exit --------------------")){
                 int choice = validation.getNumber(choiceString);
                 if (choice >= 1 && choice <= 5){
                     RedirectToTask(choice, bank, validation, operation);
@@ -33,7 +33,6 @@ public class Main {
                 }
             }
             else {
-                System.out.println("The Program Will Exit --------------------");
                 break;
             }
         }
